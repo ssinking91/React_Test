@@ -107,6 +107,34 @@ NODE_ENV=production yarn install 또는 yarn install --production
 
 ### 🔨 2. 실행방법
 
+- **npm5 부터는 --save 옵션을 기본 옵션으로 적용한다. 즉, --save를 사용하지 않아도 dependencies에 항목을 추가된다.**
+
+```javasciprt
+✔️ npm
+JavaScript용 Package Manager
+
+
+
+✔️ npm init
+패키지 의존성을 관리할 package.json 파일을 만드는 명령어
+
+
+
+✔️ npm install (plugin)
+npm으로 해당 프로젝트에 패키지(plugin)를 설치
+
+
+
+✔️ npm install (plugin) --save
+패키지(plugin)를 ./node_modules 디렉터리에 설치하고 ./package.json 파일의 dependencies 항목에 패키지 정보가 저장됩니다.
+--production 빌드 시 해당 패키지가 포함됩니다.
+
+
+✔️ npm install (plugin) --save-dev
+패키지(plugin)을 ./node_modules 디렉터리에 설치하고 ./package.json 파일의 devDependencies 항목에 패키지 정보가 저장됩니다.
+--production 빌드 시 해당 패키지는 포함되지 않습니다.
+```
+
 - npx create-react-app react-test-app
 
 <br/>
@@ -119,21 +147,48 @@ NODE_ENV=production yarn install 또는 yarn install --production
 
 <br/>
 
-- Eslint 설정 파일 생성
+- ✔️ Eslint 설정 파일 생성
 
   1. package.json에 eslintConfig 부분 제거
 
   2. .eslintrc.json 파일 생성
 
-  3. 일반적일때
+  3. Plugins : eslint에서 기본으로 제공하지 않는 다양한 규칙을 플러그인을 통해 사용할 수 있습니다.
 
-     - eslint-plugin-react
+     - eslint: ESLint 코어
 
-     - eslint-plugin-react-hooks
+     - eslint-plugin-react: React 관련 린트 설정을 지원
 
-     - npm eslint-plugin-react eslint-plugin-react-hooks --save-dev
+     - eslint-plugin-react-hooks: React Hooks의 규칙을 강제해주는 플러그인
 
-  4. React_Test일때
+     - eslint-plugin-import: ES2015+의 import/export 구문을 지원
+
+     - eslint-plugin-jsx-a11y: JSX 내의 접근성 문제에 대해 즉각적인 AST린팅 피드백을 제공
+
+     - eslint-config-prettier: prettier와 eslint의 충돌을 일으키는 ESLint 규칙들을 비활성화시켜주는 config
+
+     - eslint-plugin-prettier: prettier에서 인식하는 오류를 ESLint가 출력 // 사용해도 되지만 비추
+
+     - eslint-config-airbnb: airbnb사의 코딩규칙을 사용
+
+     - npm eslint-plugin-react eslint-plugin-react-hooks eslint-config-prettier --save-dev
+
+     - 내부 설정
+
+       - env : **사전 정의된 전역 변수 사용을 정의** / 자주 사용되는 설정으로는 browser, node
+
+       - parserOptions : **ESLint 사용을 위해 지원하려는 Javascript 언어 옵션을 지정**
+
+       - plugins : **플러그인 추가** => 추가 할 때, eslint-plugin- 부분 생략 가능
+
+       - extends : **규칙 설정** => 플러그인을 추가 한 후에 규칙을 정해줘야 사용 가능 / react를 위한 규칙 recommended는 추천이 되는 걸 사용
+
+       - rule : **규칙 변경**
+
+     - [ESLint 설정 살펴보기](https://velog.io/@kyusung/eslint-config-2)
+     - [[React] ESLint Prettier 설정방법](https://any-ting.tistory.com/94)
+
+  4. React_Test(Jest)일때
 
      - eslint-plugin-testing-library : render로 Dom 그리는 부분
 
@@ -157,3 +212,24 @@ NODE_ENV=production yarn install 또는 yarn install --production
      ```
 
 <br/>
+
+- ✔️ Prettier 설치 및 설정
+
+  1. npm으로 설치 : 여러 개발자와 같은 포맷 유지에 더 좋음
+
+  ```javascript
+  {
+  "singleQuote": false, // 문자열은 따옴표로 formatting
+  "semi": true, // 코드 마지막에 세미콜른이 없게 formatting
+  "useTabs": false, // 탭의 사용을 금하고 스페이스바 사용으로 대체하게 formatting
+  "tabWidth": 2, // 들여쓰기 너비는 2칸
+  "trailingComma": "all", // 객체나 배열 키:값 뒤에 항상 콤마를 붙히도록 formatting
+  "printWidth": 80, // 코드 한줄이 maximum 80칸
+  "arrowParens": "avoid", // 화살표 함수가 하나의 매개변수를 받을 때 괄호를 생략하게 formatting
+  "endOfLine": "auto" // EoF 방식, OS별로 처리 방식이 다름
+  }
+  ```
+
+  2. VSCODE 익스텐션으로 설치 : 혼자서 편하게 설치해서 사용하기 좋음
+
+     - 설정 : Extension Settings 에서 설정 변경
