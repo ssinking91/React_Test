@@ -131,6 +131,8 @@ NODE_ENV=production yarn install 또는 yarn install --production
 
      - eslint-plugin-react-hooks
 
+     - npm eslint-plugin-react eslint-plugin-react-hooks --save-dev
+
   4. React_Test일때
 
      - eslint-plugin-testing-library : render로 Dom 그리는 부분
@@ -138,5 +140,20 @@ NODE_ENV=production yarn install 또는 yarn install --production
      - eslint-plugin-jest-dom : expect-matcher로 테스트
 
      - npm install eslint-plugin-testing-library eslint-plugin-jest-dom --save-dev
+
+     ```javascript
+     // src/eslintrc.json
+
+     {
+        "plugins": ["testing-library", "jest-dom"],
+        "extends": [
+        "react-app",
+        "react-app/jest",
+        "plugin:testing-library/react",
+        "plugin:jest-dom/recommended"
+        ]
+     }
+
+     ```
 
 <br/>
