@@ -101,7 +101,7 @@ NODE_ENV=production yarn install 또는 yarn install --production
 
   - `"describe"` : 여러 관련 `테스트를 그룹화하는 블록`을 만듭니다.
 
-  - `"it"` : 개별 `테스트(test)를 수행하는 곳`. 각 테스트를 작은 문장처럼 설명합니다.
+  - `"it"` : `개별 테스트(test)를 수행하는 곳`. 각 테스트를 작은 문장처럼 설명합니다.
 
   - `"expect"` : expect 함수는 `값을 테스트할 때마다 사용`됩니다. 그리고 expect 함수 혼자서는 거의 사용 되지 않으며 `matcher와 함께 사용`됩니다.
 
@@ -216,9 +216,9 @@ npm으로 해당 프로젝트에 패키지(plugin)를 설치
 
   4. React_Test(Jest)일때
 
-     - eslint-plugin-testing-library : render로 Dom 그리는 부분
+     - eslint-plugin-testing-library : `render로 Dom 그리는 부분`
 
-     - eslint-plugin-jest-dom : expect-matcher로 테스트
+     - eslint-plugin-jest-dom : `expect-matcher로 테스트`
 
      - npm install eslint-plugin-testing-library eslint-plugin-jest-dom --save-dev
 
@@ -268,7 +268,7 @@ npm으로 해당 프로젝트에 패키지(plugin)를 설치
 
 ### 💡 3. TDD
 
-- ✔️ TDD : Test Driven Development
+- ✔️ TDD : `Test Driven Development`
 
   - 실제 코드를 작성하기 전에 테스트 코드를 먼저 작성
 
@@ -276,11 +276,11 @@ npm으로 해당 프로젝트에 패키지(plugin)를 설치
 
 - ✔️ TDD 장점
 
-  1. TDD를 하므로 인해 많은 기능을 테스트하기에 소스 코드에 안정감이 부여된다.
+  1. TDD를 하므로 인해 많은 기능을 테스트하기에 `소스 코드에 안정감이 부여`된다.
 
-  2. 실제 개발하면서 많은 시간이 소요되는 부분은 디버깅 부분이기에 TDD를 사용하면 디버깅 시간이 줄어들고 실제 개발 시간도 줄어듭니다.
+  2. 실제 개발하면서 많은 시간이 소요되는 부분은 디버깅 부분이기에 TDD를 사용하면 `디버깅 시간이 줄어들고 실제 개발 시간도 줄어`듭니다.
 
-  3. 소스 코드 하나하나를 더욱 신중하게 짤 수 있기 때문에 깨끗한 코드가 나올 확률이 높습니다.
+  3. `소스 코드 하나하나를 더욱 신중`하게 짤 수 있기 때문에 깨끗한 코드가 나올 확률이 높습니다.
 
 <br/>
 
@@ -290,7 +290,8 @@ npm으로 해당 프로젝트에 패키지(plugin)를 설치
 
 ### ⚙️ 4. react-counter-test
 
-    - FireEvent API : 유저가 발생시키는 액션(이벤트)에 대한 테스트를 해야하는 경우 사용
+- 🔥 `FireEvent API` : `유저가 발생시키는 액션(이벤트)에 대한 테스트`를 해야하는 경우 사용
+- [FireEvent API 살펴보기](https://testing-library.com/docs/dom-testing-library/api-events)
 
 ```javascript
 // App.js
