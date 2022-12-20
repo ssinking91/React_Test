@@ -125,6 +125,10 @@ NODE_ENV=production yarn install 또는 yarn install --production
 
     <br />
 
+<p align="center">
+  <img width="600" alt="[Jest_쿼리함수]" src="https://user-images.githubusercontent.com/89959952/208687527-4d51fce5-e766-4fb8-97ed-effe8d942500.png">
+<p />
+
 <br/>
 
 ---
