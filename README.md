@@ -433,3 +433,17 @@ test("Prevent the -,+ button from being pressed when the on/off button is clieck
 ---
 
 <br/>
+
+### 👀 [5. Query 사용 우선 순위](https://testing-library.com/docs/queries/about/#priority)
+
+<br/>
+
+<p align="center">
+  <img width="600" alt="[Jest_쿼리함수]" src="https://user-images.githubusercontent.com/89959952/208687527-4d51fce5-e766-4fb8-97ed-effe8d942500.png">
+<p />
+
+<br/>
+
+---
+
+<br/>
