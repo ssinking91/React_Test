@@ -439,7 +439,7 @@ test("Prevent the -,+ button from being pressed when the on/off button is clieck
 <br/>
 
 <p align="center">
-  <img width="600" alt="[Jest_쿼리함수]" src="https://user-images.githubusercontent.com/89959952/208687527-4d51fce5-e766-4fb8-97ed-effe8d942500.png">
+  <img width="600" alt="[Query_사용우선순위]" src="https://user-images.githubusercontent.com/89959952/209343747-090c1dc3-e481-44d1-8538-e1d32835bfa6.png">
 <p />
 
 <br/>
@@ -461,7 +461,7 @@ test("Prevent the -,+ button from being pressed when the on/off button is clieck
 <br/>
 
 <p align="center">
-  <img width="600" alt="[Jest_쿼리함수]" src="https://user-images.githubusercontent.com/89959952/208687527-4d51fce5-e766-4fb8-97ed-effe8d942500.png">
+  <img width="600" alt="[userEvent]" src="https://user-images.githubusercontent.com/89959952/209343871-8c0d0803-85ea-4dcf-b484-6026d2d0bcd7.png">
 <p />
 
 <br/>
