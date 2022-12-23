@@ -447,3 +447,25 @@ test("Prevent the -,+ button from being pressed when the on/off button is clieck
 ---
 
 <br/>
+
+### 👀 [6. userEvent > fireEvent](https://github.com/testing-library/user-event/blob/5feaa942f46bb37d96c2f2fbeb4b33e8beff75ad/src/click.js#L87-L103)
+
+- 이전에 테스팅에서 버튼을 클릭했을 때 fireEvent API를 사용했습니다. 이때 fireEvent를 사용해서 잘 처리를 해줬지만 userEvent API를 사용하는 게 더 좋은 방법입니다. fireEvent.click(element) < userEvent.click(element)
+
+- userEvent
+
+  - userEvent는 fireEvent 를 사용해서 만들어졌습니다. userEvent의 내부 코드를 보면 fireEvent를 사용하면서 엘리먼트의 타입에 따라서 Label을 클릭했을 때, checkbox, radio 을 클릭했을 때 그 엘리먼트 타입에 맞는 더욱 적절한 반응을 보여줍니다.
+
+  - 예를 들어서 fireEvent 로 버튼을 클릭하면 fireEvent.click(button) 버튼이 focus 되지 않습니다. 하지만 userEvent로 클릭하면 userEvent.click(button) 버튼이 focus 가 됩니다. 이렇게 실제 사용하는 유저가 보기에 실제 버튼을 클릭하는 행위가 더 잘 표현되기에 userEvent를 사용하는 게 더 추천되는 방법입니다.
+
+<br/>
+
+<p align="center">
+  <img width="600" alt="[Jest_쿼리함수]" src="https://user-images.githubusercontent.com/89959952/208687527-4d51fce5-e766-4fb8-97ed-effe8d942500.png">
+<p />
+
+<br/>
+
+---
+
+<br/>
